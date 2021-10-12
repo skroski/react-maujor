@@ -20,7 +20,6 @@ class App extends Component {
       }
 
       )
-
   }
   handleRemoverLinha = (id) => {
     const livros = this.state.livros.filter(l => l.id !== id);
