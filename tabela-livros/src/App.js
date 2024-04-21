@@ -42,17 +42,10 @@ class App extends Component {
           <Route end path="/programacao" element={ <Programacao livros={this.state.livros}/>} />
           <Route end path="/design" element={ <Design livros={this.state.livros}/>} />
           <Route end path="/catalogo" element={<Catalogo livros={this.state.livros}/>} />
-          <Route path="/livro/:livroSlug"
-            element={({ props }) => {
-              const livro = this.state.livros.find(
-                (livro) => livro.slug === props.match.params.livroSlug
-              );
-              if (livro) 
-              return <Livro livros={this.state.livros} />;
-              else 
-              return <NotFound />;
-            }}
-          />
+          <Route path="/livro" element={<Livro livros={this.state.livros}/>}>
+            <Route path=":livroSlug" element={<Livro livros={this.state.livros}/>} />
+          </Route>
+          
           <Route component={NotFound} />
         </Routes>
         <Rodape />

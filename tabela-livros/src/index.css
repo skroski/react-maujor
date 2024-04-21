@@ -197,6 +197,12 @@ ul {
     float: left;
     margin: 0 10px;
   }
+  
+  .logo {
+    position: relative;
+    padding: 1.2em 0;
+    background: url(../public/imagens/logo.png) center no-repeat;
+  }
   @media screen and (max-width: 600px) {
     .principal {
       flex-direction: column;
