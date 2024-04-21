@@ -1,9 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-let linkCorrente = {
-  color: "#027399",
-};
+
 const Navegacao = () => (
   <ul>
     <li>
@@ -22,21 +20,21 @@ const Navegacao = () => (
       </NavLink>
     </li>
     <li>
-      <NavLink end activestyle={linkCorrente} to="/programacao"
+      <NavLink end  to="/programacao"
        style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}
       >
         Programacao
       </NavLink>
     </li>
     <li>
-      <NavLink end activestyle={linkCorrente} to="/design"
+      <NavLink end to="/design"
        style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}
       >
         Design
       </NavLink>
     </li>
     <li>
-      <NavLink end activestyle={linkCorrente} to="/catalogo"
+      <NavLink end to="/catalogo"
        style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}
       >
         Catalogo
